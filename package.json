@@ -1,0 +1,67 @@
+{
+  "name": "dsh-pixeltrace",
+  "version": "0.1.0",
+  "description": "PixelTrace for DeepSeek Harness: rebuild a raster image on a PowerPoint slide out of editable shapes, cropped pictures and text boxes, pixel-identical to the source, and download the .pptx.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE",
+    "CONTRACT.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "pptx",
+    "powerpoint",
+    "pixel-perfect",
+    "image-to-pptx",
+    "ooxml"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "test": "node --test",
+    "verify": "node tools/verify.mjs"
+  }
+}

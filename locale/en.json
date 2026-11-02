@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "PixelTrace",
+    "description": "Rebuild a raster image on a PowerPoint slide out of editable shapes, cropped pictures and text boxes, pixel-identical to the source, then export the .pptx."
+  }
+}

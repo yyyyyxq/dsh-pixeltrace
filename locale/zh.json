@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "像素复刻 PixelTrace",
+    "description": "把图片按像素还原成 PPT 里可编辑的形状、图片和文本框，并导出像素级一致的 .pptx。"
+  }
+}
